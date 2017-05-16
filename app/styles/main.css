@@ -43,7 +43,6 @@ body {
     right: 0;
     height: 100px;
     color: white;
-    /* #3 */
     text-decoration: none;
 }
 
@@ -53,19 +52,16 @@ body {
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* #4*/
     vertical-align: middle;
     color: white;
     font-size: 0.625rem;
     letter-spacing: 0.05rem;
     font-weight: 700;
     text-transform: uppercase;
-    /* #3 */
     text-decoration: none;
     cursor: pointer;
 }
 
-/* #5 */
 
 .links-container .navbar-link:hover {
     color: rgb(233,50,117);
@@ -99,4 +95,14 @@ body {
 
 @media (min-width: 1024px) {
     html { font-size: 120%; }
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
 }
