@@ -5,11 +5,11 @@
                 <span class="ion-skip-backward"></span>
             </a>
             <a class="play-pause">
-                <span class="ion-play"
+                <span class='ion-play'
                       ng-show="!playerBar.songPlayer.currentSong.playing"
                       ng-click="playerBar.songPlayer.play()">
                 </span>
-                <span class="ion-pause"
+                <span class='ion-pause'
                       ng-show="playerBar.songPlayer.currentSong.playing"
                       ng-click="playerBar.songPlayer.pause()">
                 </span>
@@ -19,24 +19,18 @@
             </a>
         </div>
         <div class="control-group currently-playing">
-            <h2 class="song-name">{{ playerBar.songPlayer.currentSong.title }}</h2>
-            <h2 class="artist-song-mobile">{{ playerBar.songPlayer.currentSong.title }} {{ album.albumData.artist }}</h2>
-            <h3 class="artist-name">{{ album.albumData.artist }}</h3>
+            <h2 class="song-name">{{ playerBar.songPlayer.currentSong.name }}</h2>
+            <h2 class="artist-song-mobile">{{ playerBar.songPlayer.currentSong.name }}</h2>
+            <h3 class="artist-name">{{ playerBar.albumData.artist }}</h3>
             <div class="seek-control">
-                <div class="seek-bar">
-                    <div class="fill"></div>
-                    <div class="thumb"></div>
-                </div>
+                <seek-bar></seek-bar>
                 <div class="current-time"></div>
-                <div class="total-time">{{ playerBar.songPlayer.currentSong.duration }}</div>
+                <div class="total-time">{{ playerBar.songPlayer.currentSong.length }}</div>
             </div>
         </div>
         <div class="control-group volume">
             <span class="icon ion-volume-high"></span>
-            <div class="seek-bar">
-                <div class="fill"></div>
-                <div class="thumb"></div>
-            </div>
+            <seek-bar></seek-bar>
         </div>
     </div>
 </section>
