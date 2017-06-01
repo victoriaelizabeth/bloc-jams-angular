@@ -17,6 +17,7 @@
 			scope: {
                 onChange: '&'
             },
+            
 			link: function (scope, element, attributes) {
 				scope.value = 0;
 				scope.max = 100;
@@ -31,11 +32,11 @@
                     scope.max = newValue;
  });
 
-				var percentString = function () {
-					var value = scope.value;
-					var max = scope.max;
-					var percent = value / max * 100;
-					return percent + "%";
+        var percentString = function () {
+            var value = scope.value;
+            var max = scope.max;
+            var percent = value / max * 100;
+            return percent + "%";
 				};
 
 				scope.fillStyle = function () {
